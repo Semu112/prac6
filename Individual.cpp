@@ -1,6 +1,7 @@
 #include "Individual.h"
 
 #include <string>
+#include <iostream>
 
 void Individual::setString(std::string newStr){
     this->binaryString = newStr;
@@ -19,14 +20,16 @@ int Individual::getBit(int pos){
     return (this->binaryString[pos])-48;
 }
 
-void Individual::setBit(int index, int value){
-
-    this->binaryString[index%this->getLength()] = std::to_string(value)[0];
-
-}
-
 void Individual::flipBit(int pos){
-    this->binaryString[pos%this->getLength()] = !(this->binaryString[pos%this->getLength()]-48);
+
+    pos = pos%this->getLength();
+
+    int bitToChange = this->getBit(pos);
+    int flippedBit = !bitToChange;
+    char charBit = std::to_string(flippedBit)[0];
+
+    this->binaryString[pos] = charBit;
+
 }
 
 int Individual::getMaxOnes(){

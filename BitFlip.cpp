@@ -1,13 +1,16 @@
 #include "BitFlip.h"
 
+#include <iostream>
+
 Individual* BitFlip::mutate(Individual individual, int k){
 
     Individual* newInd = new Individual(individual.getString());
 
-    int strLength = newInd->getLength(); //Gets the length of the string
-    int bit = (newInd->getString()[(k-1)%strLength])-48;
+    std::cout << "before flip: " << newInd->getBit(k-1) << std::endl;
 
-    newInd->setBit(k-1, !bit); //Flips bit
+    newInd->flipBit((k-1)%newInd->getLength());
+
+    std::cout << "after flip: " << newInd->getBit(k-1) << std::endl;
 
     return newInd;
 }

@@ -13,7 +13,6 @@ class Individual {
         int getMaxOnes();
         int getLength();
         void setString(std::string newStr);
-        void setBit(int index, int value);
 
         Individual(int length){
             for(int i = 0; i<length; i++){
