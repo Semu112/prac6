@@ -12,7 +12,7 @@ std::string Individual::getString(){
 
 int Individual::getBit(int pos){
 
-    if(pos<0 || pos > this->getString().length()){
+    if(pos<0 || pos > this->getLength()){
         return -1;
     }
 
@@ -21,27 +21,32 @@ int Individual::getBit(int pos){
 
 void Individual::setBit(int index, int value){
 
-    this->binaryString[index] = std::to_string(value)[0];
+    this->binaryString[index%this->getLength()] = std::to_string(value)[0];
 
 }
 
 void Individual::flipBit(int pos){
-    this->binaryString[pos] = !(this->binaryString[pos]-48);
+    this->binaryString[pos%this->getLength()] = !(this->binaryString[pos%this->getLength()]-48);
 }
 
 int Individual::getMaxOnes(){
 
     int sum = 0;
-    for(int i = 0; i<this->getString().length(); i++){
-        if(this->binaryString[i] == 1){
+    int maxSum = 0;
+    for(int i = 0; i<this->getLength(); i++){
+        if(this->binaryString[i]-48 == 1){
             sum++;
         }
         else{
             sum = 0;
         }
+
+        if(sum>maxSum){
+            maxSum = sum;
+        }
     }
 
-    return sum;
+    return maxSum;
 }
 
 int Individual::getLength(){
