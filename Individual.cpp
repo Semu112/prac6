@@ -1,7 +1,6 @@
 #include "Individual.h"
 
 #include <string>
-#include <iostream>
 
 void Individual::setString(std::string newStr){
     this->binaryString = newStr;

@@ -15,22 +15,18 @@ Individual* execute(Individual* indPtr, Mutator* mPtr, int k){
 
 int main(void){
 
-    /*
+    
     std::string binaryString1;
-    // std::cin >> binaryString1;
-    binaryString1 = "01111";
+    std::cin >> binaryString1;
 
     int k1;
-    // std::cin >> k1;
-    k1 = 5;
+    std::cin >> k1;
 
     std::string binaryString2;
-    // std::cin >> binaryString2;
-    binaryString2 = "110000";
+    std::cin >> binaryString2;
 
     int k2;
-    // std::cin >> k2;
-    k2 = 4;
+    std::cin >> k2;
 
     Individual individual1(binaryString1);
     Individual individual2(binaryString2);
@@ -43,9 +39,9 @@ int main(void){
     
     individual2 = *(execute(&individual2, &r, k2));
     // individual2 = *(execute(&individual2, &bf, k2));
-    */
+    
 
-    /**/
+    /*
     Individual individual1("01111");
     Individual individual2("110000");
 
@@ -67,9 +63,9 @@ int main(void){
     individual1.setString( bfp.mutate(individual1, 1)->getString() );
     std::cout << "Randomly mutate with probability 1: " << individual1.getString() << std::endl;
 
-    /**/
+    */
 
-    // std::cout << individual1.getString()  << " " << individual2.getString() << " " << individual2.getMaxOnes() << std::endl;
+    std::cout << individual1.getString()  << " " << individual2.getString() << " " << individual2.getMaxOnes() << std::endl;
 
     return 0;
 }
