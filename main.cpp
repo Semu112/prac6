@@ -68,7 +68,7 @@ int main(void){
 
     
 
-    // std::cout << individual1.getString()  << " " << individual2.getString() << " " << individual2.getMaxOnes() << std::endl;
+    std::cout << individual1.getString()  << " " << individual2.getString() << " " << individual2.getMaxOnes() << std::endl;
 
     return 0;
 }
