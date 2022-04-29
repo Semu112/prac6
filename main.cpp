@@ -18,7 +18,6 @@ Individual* execute(Individual* indPtr, Mutator* mPtr, int k){
 
 int main(void){
 
-    /*
     std::string binaryString1;
     std::cin >> binaryString1;
 
@@ -43,9 +42,8 @@ int main(void){
     individual2 = *(execute(&individual2, &r, k2));
     individual2 = *(execute(&individual2, &bf, k2));
     
-    */
 
-    
+    /*
     Individual individual1("01111");
     Individual individual2("110000");
 
@@ -66,7 +64,7 @@ int main(void){
 
     individual1 = *execute(&individual1, &bfp, 12);
     std::cout << "Randomly mutate with probability 1: " << individual1.getString() << std::endl;
-    
+    */
 
     
 
