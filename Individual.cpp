@@ -21,7 +21,7 @@ int Individual::getBit(int pos){
 
 void Individual::flipBit(int pos){
 
-    pos = pos%this->getLength();
+    pos = pos%(this->getLength()+1);
 
     int bitToChange = this->getBit(pos);
     int flippedBit = !bitToChange;
