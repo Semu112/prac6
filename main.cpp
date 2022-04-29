@@ -36,11 +36,9 @@ int main(void){
     BitFlip bf;
     Rearrange r;
 
-    individual1 = *(execute(&individual1, &r, k1));
     individual1 = *(execute(&individual1, &bf, k1));
     
     individual2 = *(execute(&individual2, &r, k2));
-    individual2 = *(execute(&individual2, &bf, k2));
     
 
     /*
