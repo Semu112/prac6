@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Individual* BitFlipProb::mutate(Individual individual, int k){
+Individual BitFlipProb::mutate(Individual individual, int k){
 
     Individual* newInd = new Individual(individual.getString());
 
@@ -15,6 +15,6 @@ Individual* BitFlipProb::mutate(Individual individual, int k){
         }
     }
 
-    return newInd;
+    return *newInd;
 
 }

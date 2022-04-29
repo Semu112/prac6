@@ -1,6 +1,6 @@
 #include "Rearrange.h"
 
-Individual* Rearrange::mutate(Individual individual, int k){
+Individual Rearrange::mutate(Individual individual, int k){
 
     Individual* newInd = new Individual(individual.getString());
 
@@ -9,5 +9,5 @@ Individual* Rearrange::mutate(Individual individual, int k){
 
     newInd->setString(subStr2 + subStr1);
 
-    return newInd;
+    return *newInd;
 }

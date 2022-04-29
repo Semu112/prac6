@@ -9,7 +9,10 @@
 
 Individual* execute(Individual* indPtr, Mutator* mPtr, int k){
 
-    return mPtr->mutate(*indPtr, k);
+    Individual* newIndividual =  new Individual(indPtr->getString());
+    *newIndividual = mPtr->mutate(*indPtr, k);
+
+    return newIndividual;
 
 }
 
