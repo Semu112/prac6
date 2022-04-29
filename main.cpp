@@ -18,7 +18,7 @@ Individual* execute(Individual* indPtr, Mutator* mPtr, int k){
 
 int main(void){
 
-    
+    /*
     std::string binaryString1;
     std::cin >> binaryString1;
 
@@ -41,10 +41,12 @@ int main(void){
     individual1 = *(execute(&individual1, &bf, k1));
     
     individual2 = *(execute(&individual2, &r, k2));
-    // individual2 = *(execute(&individual2, &bf, k2));
+    individual2 = *(execute(&individual2, &bf, k2));
+    */
+    
     
 
-    /*
+    
     Individual individual1("01111");
     Individual individual2("110000");
 
@@ -54,19 +56,19 @@ int main(void){
 
     std::cout << "First individual: " << individual1.getString() << std::endl;
 
-    individual1.setString( bf.mutate(individual1, 2)->getString() );
+    individual1.setString( bf.mutate(individual1, 2).getString() );
     std::cout << "Bit flip index 2: " << individual1.getString() << std::endl;
 
-    individual1.setString( bf.mutate(individual1, 3)->getString() );
-    std::cout << "Bit flip index 3: " << individual1.getString() << std::endl;
+    individual1.setString( bf.mutate(individual1, 8).getString() );
+    std::cout << "Bit flip index 8: " << individual1.getString() << std::endl;
 
-    individual1.setString( r.mutate(individual1, 3)->getString() );
-    std::cout << "Rearrange around index 3: " << individual1.getString() << std::endl;
+    individual1.setString( r.mutate(individual1, 12).getString() );
+    std::cout << "Rearrange around index 12: " << individual1.getString() << std::endl;
 
-    individual1.setString( bfp.mutate(individual1, 1)->getString() );
+    individual1.setString( bfp.mutate(individual1, 1).getString() );
     std::cout << "Randomly mutate with probability 1: " << individual1.getString() << std::endl;
 
-    */
+    
 
     std::cout << individual1.getString()  << " " << individual2.getString() << " " << individual2.getMaxOnes() << std::endl;
 
